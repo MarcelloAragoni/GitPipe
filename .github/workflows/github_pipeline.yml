@@ -2,9 +2,12 @@ name: GitHub Pipeline Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [pull_request]
 jobs:
-  steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - run: yarn test
+  print-username:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: yarn test
