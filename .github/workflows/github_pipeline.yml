@@ -1,8 +1,8 @@
-name: GitHub Pipeline Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Unit test pipeline
+run-name: ${{ github.actor }} is running the unit tests 🚀
 on: [pull_request]
 jobs:
-  print-username:
+  unit-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -12,3 +12,8 @@ jobs:
           node-version: 16
       - run: yarn
       - run: yarn test
+  print-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Pipeline Finished"
