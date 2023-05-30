@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Pipeline Finished"
+      - run: echo "Pipeline Finished, ok!"
