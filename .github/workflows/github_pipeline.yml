@@ -13,7 +13,6 @@ jobs:
       - run: yarn
       - run: yarn test
   print-hello:
-    needs: unit-test
     runs-on: ubuntu-latest
 
     steps:
